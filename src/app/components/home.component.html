@@ -1,0 +1,8 @@
+<Button type = "submit" (click) = "toCat()">To Cat</Button>
+<br><br>
+
+<a *ngFor="let c of cats" [routerLink]="[ '/cats', c.catId ]">
+    <div>
+        {{ c.type }}
+    </div>
+</a>

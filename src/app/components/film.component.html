@@ -1,0 +1,13 @@
+<div fxLayout="column" fxLayoutGap="2vh">
+    <mat-card *ngFor="let f of films">
+        <mat-card-header>
+            <mat-card-title> 
+            <h2>{{ f.title }} </h2> 
+            </mat-card-title>
+            <mat-card-subtitle>
+            {{ f.episode_id }}
+            </mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
+</div>
+    
