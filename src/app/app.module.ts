@@ -10,6 +10,8 @@ import { FilmComponent } from './components/film.component';
 import {MatListModule} from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
+import { TableComponent } from './components/table.component';
+import { MatTableModule } from '@angular/material/table';
 
 const appRoutes: Routes = [
 //  { path: '', component: HomeComponent },
@@ -17,14 +19,13 @@ const appRoutes: Routes = [
   { path: 'people', component: PeopleComponent },
   { path: 'film/:pId', component: FilmComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'table', component: TableComponent },
   { path: 'cats', component: CatComponent },
   { path: 'cats/:catId', component: CatComponent },
 //  { path: 'dog', component: DogComponent },
   { path: "**", redirectTo: '/', pathMatch: 'full' },
-  
 
   ];
-  
   
 @NgModule({
   declarations: [
@@ -32,13 +33,14 @@ const appRoutes: Routes = [
     HomeComponent,
     CatComponent,
     PeopleComponent,
-    FilmComponent
+    FilmComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes), //When loading RouterModule, need to define the all the routes in the current application
-    MatListModule, BrowserAnimationsModule, MatCardModule
+    MatListModule, BrowserAnimationsModule, MatCardModule, MatTableModule
 
   ],
   providers: [],

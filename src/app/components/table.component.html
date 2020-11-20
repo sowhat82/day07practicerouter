@@ -1,0 +1,24 @@
+<mat-table [dataSource]="customers">
+    
+    <ng-container matColumnDef="customerId">
+        <mat-header-cell *matHeaderCellDef>Id</mat-header-cell>
+        <mat-cell *matCellDef="let r"> {{ r.customerId }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+        <mat-cell *matCellDef="let r"> {{ r.name }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="phone">
+        <mat-header-cell *matHeaderCellDef>Phone</mat-header-cell>
+        <mat-cell *matCellDef="let r"> {{ r.phone }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="discountCode">
+        <mat-header-cell *matHeaderCellDef>Discount Code</mat-header-cell>
+        <mat-cell *matCellDef="let r"> {{ r.discountCode }}</mat-cell>
+    </ng-container>
+
+
+    <mat-header-row *matHeaderRowDef="displayCols"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayCols"></mat-row>
+</mat-table>
+    
